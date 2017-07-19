@@ -1,0 +1,11 @@
+- name: Set root password
+  mysql_user:
+          name: root
+          host: localhost
+          password: "{{ mysql_root_password }}"
+
+- name: Create a new database with name 'dbname'
+  mysql_db:
+          name: dbname
+          state: present
+
