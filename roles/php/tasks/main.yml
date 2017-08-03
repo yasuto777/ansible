@@ -4,9 +4,9 @@
   yum: name=http://rpms.famillecollet.com/enterprise/remi-release-7.rpm state=present
 
 - name: install php7 and modules
-  yum: name={{ item }} state=present eneblerepo=remi
+  yum: name={{ item }} state=present enablerepo=remi,remi-php70
   with_items:
-    - php
+    - php70
     - php-cli
     - php-mysqlnd
     - php-xml
